@@ -19,12 +19,47 @@
         bindings = <keys>;                 \
     };
 
-
 / {
     macros {
-        MACRO(move_desktop_left, <&kp LC(LEFT)>);
-        MACRO(move_desktop_right, <&kp LC(RIGHT)>);
-        MACRO(open_1password, <&kp LG(LS(SPACE))>);
+        MACRO(move_desktop_left, <&kp LC(
+
+        LEFT = )>);
+
+        MACRO(move_desktop_right, <&kp LC(
+
+        RIGHT = )>);
+
+        MACRO(open_1password, <&kp LG(LS(
+
+        SPACE = ))>);
+
+        dt_left: dt_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT)>;
+            label = "DT_LEFT";
+        };
+
+        dt_right: dt_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT)>;
+            label = "DT_RIGHT";
+        };
+
+        open_1p: open_1p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(SPACE))>;
+            label = "OPEN_1P";
+        };
+
+        show_windows: show_windows {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(UP_ARROW)>;
+            label = "SHOW_WINDOWS";
+        };
     };
 
     keymap {
@@ -89,12 +124,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                                          &trans &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                                          &trans &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                                          &trans &trans           &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &open_1password &trans                                          &trans &open_1password  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &move_desktop_left  &move_desktop_right &trans &trans           &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans  &trans              &trans              &trans &trans           &trans
+&trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &open_1p  &trans                         &trans  &show_windows  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &dt_left    &dt_right  &trans  &trans         &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans      &trans     &trans  &trans         &trans
             >;
 
             label = "MACRO";
