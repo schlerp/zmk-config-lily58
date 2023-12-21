@@ -9,30 +9,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define MACRO(name, keys)                  \
-    name: name##_macro {                   \
-        label = #name;                     \
-        compatible = "zmk,behavior-macro"; \
-        wait-ms = <1>;                     \
-        tap-ms = <1>;                      \
-        #binding-cells = <0>;              \
-        bindings = <keys>;                 \
-    };
-
 / {
     macros {
-        MACRO(move_desktop_left, <&kp LC(
-
-        LEFT = )>);
-
-        MACRO(move_desktop_right, <&kp LC(
-
-        RIGHT = )>);
-
-        MACRO(open_1password, <&kp LG(LS(
-
-        SPACE = ))>);
-
         dt_left: dt_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -122,7 +100,7 @@
             label = "FUNCNAV";
         };
 
-        layer_3 {
+        macro_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
