@@ -81,11 +81,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans        &trans            &trans             &trans          &trans           &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp KP_SLASH  &kp KP_SUBTRACT   &kp UNDERSCORE     &kp LPAR        &kp RPAR         &kp TILDE
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &kp TILDE     &kp KP_EQUAL      &kp KP_PLUS        &kp PIPE        &kp QUESTION     &trans
-                                                 &trans             &trans        &trans        &trans    &trans  &trans        &trans            &trans
+&trans  &trans         &trans         &trans            &trans             &trans                             &trans     &trans          &trans                &trans                 &trans        &trans
+&trans  &kp SEMICOLON  &kp LESS_THAN  &kp GREATER_THAN  &kp DOLLAR         &kp HASH                           &kp GRAVE  &kp EQUAL       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COMMA     &trans
+&trans  &kp CARET      &kp MINUS      &kp PLUS          &kp DOUBLE_QUOTES  &kp PRCNT                          &kp COLON  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERIOD    &trans
+&trans  &kp BACKSLASH  &kp SLASH      &kp ASTERISK      &kp SQT            &kp EXCLAMATION  &trans    &trans  &kp TILDE  &kp PIPE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp QUESTION  &trans
+                                      &trans            &trans             &trans           &trans    &trans  &trans     &trans          &trans
             >;
 
             label = "SYMBOL";
@@ -112,11 +112,11 @@
 
         macro_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans                         &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &open_1p  &trans                         &trans  &show_windows  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &dt_left    &dt_right  &trans  &trans         &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans      &trans     &trans  &trans         &trans
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                         &trans  &trans         &trans  &trans  &trans  &trans
+&trans      &trans            &trans             &trans             &trans        &trans                               &trans  &trans         &trans  &trans  &trans  &trans
+&trans      &trans            &trans             &trans             &open_1p      &trans                               &trans  &show_windows  &trans  &trans  &trans  &trans
+&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &dt_left    &dt_right  &trans  &trans         &trans  &trans  &trans  &trans
+                                                 &trans             &trans        &trans        &trans      &trans     &trans  &trans         &trans
             >;
 
             label = "MACRO";
